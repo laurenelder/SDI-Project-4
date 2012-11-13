@@ -5,13 +5,26 @@
 
 // My Library
 
-var myLibrary = {
+var myLibrary = function() {
 
 // String Functions
 // String Phone Number Function
 
-	var phnNum = function(){
-	
+	var phnNum = function(num) {
+		var areaEnd = num.indexOf("-");
+		var numStart = num.indexOf("-") + 1;
+		var preNumEnd = num.lastIndexOf("-");
+		var sufNumStart = num.lastIndexOf("-") + 1;
+		var numEnd = num.length;
+		var areaCode = num.substring(0, areaEnd);
+		var prefixNum = num.substring(numStart, preNumEnd);
+		var suffixNum = num.substring(sufNumStart, numEnd);
+		if (areaCode.length === 3 && prefixNum.length === 3 && suffixNum.length === 4) {
+			return true
+		} else { 
+			return false
+		};
+		
 	};
 
 // String Email Function
@@ -42,6 +55,7 @@ var myLibrary = {
 // Number Decimal Config Function
 
 	var dcmlFrmt = function(){
+		
 	
 	};
 
@@ -81,6 +95,13 @@ var myLibrary = {
 	var keyValueRtrn = function(){
 	
 	};
+	
+	return {
+		"phnNum":	phnNum
+	};
 
 };
+
+var newLibrary = new myLibrary()
+
 
