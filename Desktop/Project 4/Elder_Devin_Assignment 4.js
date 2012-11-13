@@ -64,7 +64,7 @@ var myLibrary = function() {
 		var words = phrase.split();
 		var titleCse = function(indvdWords) {
 			var titleCse = indvdWords
-			for (i = 0; i < titleCse.length; i++) {
+			for (i = 0; i < indvdWords.length; i++) {
 				var lowerLttr = titleCse[i].charAt(0);
 				var capLttr = lowerLttr.toUpperCase();
 				console.log(capLttr);
