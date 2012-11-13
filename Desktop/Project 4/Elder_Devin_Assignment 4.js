@@ -60,8 +60,17 @@ var myLibrary = function() {
 
 // String Titlecase Function
 
-	var titleCaseString = function(){
-	
+	var titleCaseString = function(phrase) {
+		var words = phrase.split();
+		var titleCse = function(indvdWords) {
+			var titleCse = indvdWords
+			for (i = 0; i < titleCse.length; i++) {
+				var lowerLttr = titleCse[i].charAt(0);
+				var capLttr = lowerLttr.toUpperCase();
+				console.log(capLttr);
+			};
+		};
+		titleCse(words)
 	};
 
 // String Separator Function
@@ -118,7 +127,8 @@ var myLibrary = function() {
 	return {
 		"phnNum":	phnNum,
 		"emlAdrs":	emlAdrs,
-		"myUrl":	myUrl
+		"myUrl":	myUrl,
+		"titleCaseString": titleCaseString
 	};
 
 };
