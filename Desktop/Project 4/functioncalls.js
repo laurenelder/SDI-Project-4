@@ -4,3 +4,4 @@
 // "Date"
 
 console.log(newLibrary.phnNum("863-680-1697"));
+console.log(newLibrary.emlAdrs("lbf@hotmail.com"));

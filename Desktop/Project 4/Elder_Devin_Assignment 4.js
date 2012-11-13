@@ -24,13 +24,21 @@ var myLibrary = function() {
 		} else { 
 			return false
 		};
-		
 	};
 
 // String Email Function
 
-	var emlAdrs = function(){
-	
+	var emlAdrs = function(addrs){
+		var symLoc = addrs.indexOf("@");
+		var sym = addrs.charAt(symLoc)
+		var suffixStart = addrs.lastIndexOf(".") + 1;
+		var addrsEnd = addrs.length;
+		var suffixNum = addrs.substring(suffixStart, addrsEnd);
+		if (sym === "@" && suffixNum.length === 3) {
+			return true
+		} else {
+			return false
+		};
 	};
 
 // String Url Function
@@ -97,7 +105,8 @@ var myLibrary = function() {
 	};
 	
 	return {
-		"phnNum":	phnNum
+		"phnNum":	phnNum,
+		"emlAdrs":	emlAdrs
 	};
 
 };
