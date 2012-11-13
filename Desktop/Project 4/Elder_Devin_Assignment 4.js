@@ -19,6 +19,7 @@ var myLibrary = function() {
 		var areaCode = num.substring(0, areaEnd);
 		var prefixNum = num.substring(numStart, preNumEnd);
 		var suffixNum = num.substring(sufNumStart, numEnd);
+		console.log("The phone number is valid.");
 		if (areaCode.length === 3 && prefixNum.length === 3 && suffixNum.length === 4) {
 			return true
 		} else { 
@@ -34,6 +35,7 @@ var myLibrary = function() {
 		var suffixStart = addrs.lastIndexOf(".") + 1;
 		var addrsEnd = addrs.length;
 		var suffixNum = addrs.substring(suffixStart, addrsEnd);
+		console.log("The email address is valid.");
 		if (sym === "@" && suffixNum.length === 3) {
 			return true
 		} else {
@@ -43,8 +45,17 @@ var myLibrary = function() {
 
 // String Url Function
 
-	var myUrl = function(){
-	
+	var myUrl = function(url){
+		var prefixOne = "http:"
+		var prefixTwo = "https:"
+		var sym = url.indexOf(":") + 1
+		var prefix = url.substring(0, sym)
+		console.log("The URL address is valid.");
+		if (prefix === prefixOne || prefix === prefixTwo) {
+			return true
+		} else {
+			return false
+		};
 	};
 
 // String Titlecase Function
@@ -106,7 +117,8 @@ var myLibrary = function() {
 	
 	return {
 		"phnNum":	phnNum,
-		"emlAdrs":	emlAdrs
+		"emlAdrs":	emlAdrs,
+		"myUrl":	myUrl
 	};
 
 };
