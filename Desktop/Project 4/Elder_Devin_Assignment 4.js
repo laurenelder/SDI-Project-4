@@ -167,14 +167,22 @@ var myLibrary = function() {
 		};
 		var srtArray	= array.sort(arraySrt);
 		var lowNum		= srtArray[0];
-		return lowNum
-		
+		return lowNum	
 	};
 
 // Array Total Value Function
 
-	var totalValue = function(){
-	
+	var totalValue = function(array) {
+	console.log("The total of the array elements " + array + " added together equal..");
+		var myArray		= array
+		for (i = 0; i < myArray.length; i++) {
+			myArray[i] = +myArray[i];
+		};
+		var addArray = 0
+		for (i = 0; i < myArray.length; i++) {
+			addArray += myArray[i];
+		};
+		return addArray
 	};
 
 // Array Key Value Return Function
@@ -193,7 +201,8 @@ var myLibrary = function() {
 		"fzyMtchNum":		fzyMtchNum,
 		"differenceDate":	differenceDate,
 		"numRtrn":			numRtrn,
-		"smallestValue":	smallestValue
+		"smallestValue":	smallestValue,
+		"totalValue":		totalValue
 	};
 
 };
