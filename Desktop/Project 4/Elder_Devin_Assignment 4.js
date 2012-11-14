@@ -124,7 +124,7 @@ var myLibrary = function() {
 
 	var differenceDate = function(dateOne, dateTwo) {
 		console.log("The time between the date " + dateOne + " and date " + dateTwo + 
-		" is ...");
+		" is ..");
 		var dateObjOne = Date.parse(dateOne);
 		var dateObjTwo = Date.parse(dateTwo);
 		var parsedDiff = dateObjTwo - dateObjOne
@@ -151,15 +151,24 @@ var myLibrary = function() {
 
 // Number Actual Num Return Function
 
-	var numRtrn = function(){
-	
+	var numRtrn = function(strNum) {
+		console.log("The string input number " + strNum + " will be returned as..")
+		var num		= strNum.substring(0, strNum.length);
+		return num
 	};
 
 // Array Functions
 // Array Smallest Value Function
 
-	var smallestValue = function(){
-	
+	var smallestValue = function(array) {
+	console.log("The lowest number in the array " + array + " is..");
+		arraySrt = function (a, b) {
+			return (a-b);
+		};
+		var srtArray	= array.sort(arraySrt);
+		var lowNum		= srtArray[0];
+		return lowNum
+		
 	};
 
 // Array Total Value Function
@@ -182,7 +191,9 @@ var myLibrary = function() {
 		"separatorMod": 	separatorMod,
 		"dcmlFrmt":			dcmlFrmt,
 		"fzyMtchNum":		fzyMtchNum,
-		"differenceDate":	differenceDate
+		"differenceDate":	differenceDate,
+		"numRtrn":			numRtrn,
+		"smallestValue":	smallestValue
 	};
 
 };

@@ -10,5 +10,7 @@ console.log(newLibrary.myUrl("https:www.streetfire.net"));
 console.log(newLibrary.separatorMod("Dog,Cat,Monkey,Shark", ",", "/", "gi"));
 console.log(newLibrary.dcmlFrmt(10));
 // 1st argument (base number), 2nd (new number), and 3rd (percent of difference)
-console.log(newLibrary.fzyMtchNum(10, 16, 50));
+console.log(newLibrary.fzyMtchNum(10, 15, 50));
 newLibrary.differenceDate("Nov 14, 2012", "Mar 24, 2013");
+console.log(newLibrary.numRtrn("2048"));
+console.log(newLibrary.smallestValue([22, 1, 3 , 9, 6, 8, 10]));
