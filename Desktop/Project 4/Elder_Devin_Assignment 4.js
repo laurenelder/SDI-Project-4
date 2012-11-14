@@ -187,8 +187,20 @@ var myLibrary = function() {
 
 // Array Key Value Return Function
 
-	var keyValueRtrn = function(){
-	
+	var keyValueRtrn = function(objects) {
+	console.log("The following objects have been sorted by their key values to..");
+		var srtObject	= objects.sort();
+			var compare	= function(a, b) {
+				if (a.a < b.a) {
+					return -1;
+				} else {
+					return 1;
+				};
+				return 0;
+			};
+		var srtedObject = srtObject.sort(compare)
+		return srtedObject
+		console.log(srtedObject);
 	};
 	
 	return {
@@ -202,7 +214,8 @@ var myLibrary = function() {
 		"differenceDate":	differenceDate,
 		"numRtrn":			numRtrn,
 		"smallestValue":	smallestValue,
-		"totalValue":		totalValue
+		"totalValue":		totalValue,
+		"keyValueRtrn":		keyValueRtrn
 	};
 
 };

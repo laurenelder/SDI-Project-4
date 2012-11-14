@@ -15,3 +15,4 @@ newLibrary.differenceDate("Nov 14, 2012", "Mar 24, 2013");
 console.log(newLibrary.numRtrn("2048"));
 console.log(newLibrary.smallestValue([22, 1, 3 , 9, 6, 8, 10]));
 console.log(newLibrary.totalValue([2, 8, 5, "21", 9, 30, "15", 22]));
+console.log(newLibrary.keyValueRtrn([{a: 2}, {a: 8}, {a: 3}, {a: 1}, {a: 5}]));
