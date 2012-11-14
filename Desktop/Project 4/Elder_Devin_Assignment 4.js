@@ -122,8 +122,31 @@ var myLibrary = function() {
 
 // Number Difference Function
 
-	var differenceDate = function(){
-	
+	var differenceDate = function(dateOne, dateTwo) {
+		console.log("The time between the date " + dateOne + " and date " + dateTwo + 
+		" is ...");
+		var dateObjOne = Date.parse(dateOne);
+		var dateObjTwo = Date.parse(dateTwo);
+		var parsedDiff = dateObjTwo - dateObjOne
+		var rghWeeks=	 parsedDiff / 604800000
+		var weeks	=	 rghWeeks.toFixed(1);
+		var rghDays	= 	 parsedDiff / 86400000
+		var days	=	 rghDays.toFixed(1);
+		var rghHours= 	 parsedDiff / 3600000
+		var hours	=	 rghHours.toFixed(1);
+		var rghminutes = parsedDiff / 60000
+		var minutes	=	 rghminutes.toFixed(1);
+		var rghSeconds = parsedDiff / 1000
+		var seconds	=	 rghSeconds.toFixed(1);
+		console.log("In weeks: " + weeks + ", In Days: " + 
+			days + ", In Hours: " + hours + 
+			", In Minutes: " + minutes + ", In Seconds: " + 
+			seconds);
+		return	weeks,
+				days,
+				hours,
+				minutes,
+				seconds
 	};
 
 // Number Actual Num Return Function
@@ -158,7 +181,8 @@ var myLibrary = function() {
 		//"titleCaseString":	titleCaseString,
 		"separatorMod": 	separatorMod,
 		"dcmlFrmt":			dcmlFrmt,
-		"fzyMtchNum":		fzyMtchNum
+		"fzyMtchNum":		fzyMtchNum,
+		"differenceDate":	differenceDate
 	};
 
 };
