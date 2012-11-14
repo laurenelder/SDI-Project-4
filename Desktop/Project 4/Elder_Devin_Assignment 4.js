@@ -60,37 +60,64 @@ var myLibrary = function() {
 
 // String Titlecase Function
 
-	var titleCaseString = function(phrase) {
-		var words = phrase.split();
-		var titleCse = function(indvdWords) {
+/*	var titleCaseString = function(phrase) {
+		var words = phrase.split(" ");
+		var titleCse = function(indvdWords, flag) {
 			var titleCse = indvdWords
 			for (i = 0; i < indvdWords.length; i++) {
 				var lowerLttr = titleCse[i].charAt(0);
-				var capLttr = lowerLttr.toUpperCase();
-				console.log(capLttr);
+				var capLttr = 	lowerLttr.toUpperCase();
+				var lowerCase = lowerLttr.toString()
+				var upperCase = capLttr.toString()
+				var flags = flag
+				return	lowerCase,
+						upperCase,
+						flags
 			};
+			var newWord = titleCse.replace(lowerCase, upperCase, flags);
+			return newWord
 		};
-		titleCse(words)
+		titleCse(words);
+		console.log(words);
 	};
-
+*/
 // String Separator Function
 
-	var separatorMod = function(){
+	var separatorMod = function(mod, old, newChar, flag) {
+	console.log("The separator has been changed from " + old + " to " + newChar + ".");
+		var originStr = mod
+		var oldSep = old
+		var newSep = newChar
+		var flags = flag
+		var newString = originStr.replace(oldSep, newSep, flags);
+		return newString
 	
 	};
 
 // Number Functions
 // Number Decimal Config Function
 
-	var dcmlFrmt = function(){
-		
-	
+	var dcmlFrmt = function(amount) {
+		console.log("The number " + amount + " has been formatted to include two decimal" 
+		+ " places.");
+		var num = amount
+		var revisedNum = num.toFixed(2);
+		return revisedNum
 	};
 
 // Number Fuzzy Match Function
 
-	var fzyMtchNum = function(){
-	
+	var fzyMtchNum = function(numOne, numTwo, fuzzy) {
+		console.log("The number " + numTwo + " is within " + fuzzy + " percent of the " +
+		 "number " + numOne + ".")
+		var fuzzyPercent = fuzzy / 100
+		var fuzzyOne = numOne - (numOne * fuzzyPercent);
+		var fuzzyTwo = numOne * (fuzzyPercent + 1);
+		if (numTwo >= fuzzyOne && numTwo <= fuzzyTwo) {
+			return true
+		} else {
+			return false
+		};
 	};
 
 // Number Difference Function
@@ -125,10 +152,13 @@ var myLibrary = function() {
 	};
 	
 	return {
-		"phnNum":	phnNum,
-		"emlAdrs":	emlAdrs,
-		"myUrl":	myUrl,
-		"titleCaseString": titleCaseString
+		"phnNum":			phnNum,
+		"emlAdrs":			emlAdrs,
+		"myUrl":			myUrl,
+		//"titleCaseString":	titleCaseString,
+		"separatorMod": 	separatorMod,
+		"dcmlFrmt":			dcmlFrmt,
+		"fzyMtchNum":		fzyMtchNum
 	};
 
 };
