@@ -1,7 +1,8 @@
 // Devin "Lauren" Elder
 // SDI Term 1211
 // Project 4 Code Library
-// "Date"
+// 11/15/2012
+// Completed all 12 functions to make up points for missing elements in project 3
 
 // My Library
 
@@ -60,12 +61,12 @@ var myLibrary = function() {
 
 // String Titlecase Function
 
-/*	var titleCaseString = function(phrase) {
+	var titleCaseString = function(phrase) {
 		var words = phrase.split(" ");
 		var titleCse = function(indvdWords, flag) {
-			var titleCse = indvdWords
+			var titleCase = indvdWords
 			for (i = 0; i < indvdWords.length; i++) {
-				var lowerLttr = titleCse[i].charAt(0);
+				var lowerLttr = titleCase[i].charAt(0);
 				var capLttr = 	lowerLttr.toUpperCase();
 				var lowerCase = lowerLttr.toString()
 				var upperCase = capLttr.toString()
@@ -74,13 +75,14 @@ var myLibrary = function() {
 						upperCase,
 						flags
 			};
-			var newWord = titleCse.replace(lowerCase, upperCase, flags);
+			var newWord = titleCase.replace(lowerCase, upperCase, flags);
 			return newWord
 		};
-		titleCse(words);
+		titleCse(words, "g")
 		console.log(words);
+		return titleCse.newWord
 	};
-*/
+
 // String Separator Function
 
 	var separatorMod = function(mod, old, newChar, flag) {
@@ -207,7 +209,7 @@ var myLibrary = function() {
 		"phnNum":			phnNum,
 		"emlAdrs":			emlAdrs,
 		"myUrl":			myUrl,
-		//"titleCaseString":	titleCaseString,
+		"titleCaseString":	titleCaseString,
 		"separatorMod": 	separatorMod,
 		"dcmlFrmt":			dcmlFrmt,
 		"fzyMtchNum":		fzyMtchNum,
